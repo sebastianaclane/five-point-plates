@@ -1,0 +1,106 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - $block->subject: Block title.
+ * - $content: Block content.
+ * - $block->module: Module that generated the block.
+ * - $block->delta: An ID for the block, unique within each module.
+ * - $block->region: The block region embedding the current block.
+ * - $classes: String of classes that can be used to style contextually through
+ *   CSS. It can be manipulated through the variable $classes_array from
+ *   preprocess functions. The default values can be one or more of the
+ *   following:
+ *   - block: The current template type, i.e., "theming hook".
+ *   - block-[module]: The module generating the block. For example, the user
+ *     module is responsible for handling the default user navigation block. In
+ *     that case the class would be 'block-user'.
+ * - $title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - $title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ *
+ * Helper variables:
+ * - $classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable $classes.
+ * - $block_zebra: Outputs 'odd' and 'even' dependent on each block region.
+ * - $zebra: Same output as $block_zebra but independent of any block region.
+ * - $block_id: Counter dependent on each block region.
+ * - $id: Same output as $block_id but independent of any block region.
+ * - $is_front: Flags true when presented in the front page.
+ * - $logged_in: Flags true when the current user is a logged-in member.
+ * - $is_admin: Flags true when the current user is an administrator.
+ * - $block_html_id: A valid HTML ID and guaranteed unique.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_block()
+ * @see template_preprocess()
+ * @see template_preprocess_block()
+ * @see bootstrap_process_block()
+ * @see template_process()
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  <div class="container hero-logo-container">
+    <div class="row">
+      <div class="col-sm-4">
+      {{content.field_frontpage_hero_logo}}
+      {{content.field_frontpage_hero_mobile_logo}}
+      </div>
+      <div class="col-sm-8"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 nopadding">
+      {{content.field_frontpage_hero}}
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-5">{{content.field_frontpage_intro_image}}</div>
+      <div class="col-xs-12 col-sm-7">{{content.field_frontpage_intro}}</div>
+    </div>
+    <div class="row front-page-call-to-action-images">
+      <div class="col-xs-12 col-sm-4">
+        <a href="{{ content.field_frontpage_image_1_link.0['#url'] }}">{{content.field_frontpage_image_1[0]}}</a>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <a href="{{ content.field_frontpage_image_2_link.0['#url'] }}">{{content.field_frontpage_image_2[0]}}</a>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <a href="{{ content.field_frontpage_image_3_link.0['#url'] }}">{{content.field_frontpage_image_3[0]}}</a>
+      </div>
+    </div>
+    <div class="row frontpage-gallery-row">
+        {{ content.field_frontpage_gallery }}
+        <div class="col-sm-12 fpp-button">
+          <a href="{{ url('<front>') }}gallery">SEE ALL</a>
+        </div>
+        <div class="col-xs-12 mobile-fpp-button">
+          <a href="{{ url('<front>') }}gallery">Go To Gallery</a>
+        </div>
+    </div>
+  </div>
+</section>

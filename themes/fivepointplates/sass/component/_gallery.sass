@@ -1,0 +1,61 @@
+/**
+ * Gallery Styles.
+// gallery page view
+.path-gallery
+  h1.page-header
+    display: inline-block !important
+  .gallery-image
+    img:hover
+      border: none !important
+      padding: 0 !important
+  .gallery-image:hover
+    a
+      color: $black-color !important
+
+.view-gallery-view
+  display: none
+.gallery-image img:hover
+  border: 3px solid #337ab7
+  padding: 3px
+.gallery-image p
+  margin: 0 0 10px
+  display: inline
+  position: relative
+  bottom: 60px
+  left: 6px
+  background: rgba(17, 17, 17, .5)
+  color: #fff
+  padding: 0.4em
+  border-radius: 10px
+
+.gallery-title
+  text-align: center
+  padding: 10px
+  a
+    font-size: 1.125rem
+    font-weight: bold
+    text-decoration: none !important
+@media only screen and (min-width: $breakpoint-tablet)
+  .view-gallery-view
+    margin-top: 40px
+    display: block
+    padding: 0 16px
+  .gallery-title
+    background-color: $body-bg
+    padding: 12px 30px
+    line-height: 1.5
+    a
+      word-wrap: break-word
+@media only screen and (min-width: $breakpoint-laptop)
+  .gallery-title
+    padding: 15px
+    a
+      font-size: 1.25rem
+
+// colorbox styles when using colorbox
+#cboxTitle
+  text-align: center
+  font-weight: bold
+  bottom: 0
+.views-field-title p
+  display: none

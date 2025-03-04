@@ -1,0 +1,85 @@
+/**
+ * Sidebar styles.
+
+@media only screen and (max-width: $breakpoint-tablet)
+  .sidebar-menus-container
+    padding: 0
+
+.sidebar-right
+  display: none
+#block-foodmenusidebar
+  h2.block-title
+    text-align: center
+  hr
+    border-top: 2px solid #989898
+    float: none
+    margin: 20px 30px
+  .menu-pdf
+    margin-bottom: 3px
+  .fpp-button
+    display: block
+    a
+      margin-top: 40px
+@media only screen and (min-width: $breakpoint-tablet)
+  .sidebar-right
+    display: block
+  #block-foodmenusidebar
+    h2.block-title
+      font-size: 1.625rem
+      margin: 14px 0 12px 0
+    hr
+      border-top: 2px solid #989898
+      width: 80%
+      padding: 0
+      margin: 5px auto 30px auto
+    .fpp-button:hover
+      a
+        background-color: $body-bg
+    .sidebar-menus-container
+      border-left: 2px solid #989898
+      padding-left: 15px
+  body
+    .content
+      margin-top: 30px
+      padding-right: 10px
+@media only screen and (min-width: $breakpoint-laptop)
+  #block-foodmenusidebar
+    h2.block-title
+      font-size: 1.875rem
+      text-align: right
+      margin: 12px 0
+    hr
+      width: 70%
+      float: right
+      margin: 5px 0 30px 0
+    .sidebar-menus-container
+      clear: both
+    .sidebar-title-container
+      padding-right: 46px
+    .menu-pdf
+      text-align: right
+      padding: 20px 46px 20px 30px
+    img
+      margin-right: -6px
+  body
+    .content
+      padding-right: 30px
+    .main-container
+      section.content-section
+        padding-right: 0
+@media only screen and (min-width: $breakpoint-desktop)
+  #block-foodmenusidebar
+    h2.block-title
+      font-size: 2rem
+    .menu-pdf
+      padding: 20px 66px 20px 30px
+    .sidebar-title-container
+      padding-right: 66px
+      padding-top: 11px
+  body
+    .content
+      padding-right: 30px
+@media only screen and (min-width: 1500px)
+  body
+    .content
+      padding-right: 50px

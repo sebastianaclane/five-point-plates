@@ -1,0 +1,156 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import component/alert
+@import component/ajax
+@import component/field
+@import component/file
+@import component/filter
+@import component/form
+@import component/icon
+@import component/navbar
+@import component/node
+@import component/panel
+@import component/progress-bar
+@import component/table-drag
+@import component/tabs
+@import component/toolbar
+@import component/frontpage
+@import component/footer
+@import component/sidebar
+@import component/pagestyles
+@import component/gallery
+
+// jQuery UI style overrides.
+@import jquery-ui/autocomplete
+
+// Setting up rems for font sizes
+html
+  font-size: 18px
+  color: $text-color
+@media only screen and (min-width: $breakpoint-tablet)
+  html
+    font-size: 16px
+/*
+  10px = 0.625rem
+  11px = 0.6875rem
+  12px = 0.75rem
+  13px = 0.8125rem
+  14px = 0.875rem
+  15px = 0.9375rem
+  16px = 1rem (base)
+  18px = 1.125rem
+  19px = 1.188rem
+  20px = 1.25rem
+  21px = 1.313rem
+  22px = 1.375rem
+  23px = 1.438rem
+  24px = 1.5rem
+  25px = 1.563rem
+  26px = 1.625rem
+  28px = 1.75rem
+  30px = 1.875rem
+  32px = 2rem
+  34px = 2.125rem
+  35px = 2.188rem
+  36px = 2.25rem
+  38px = 2.375rem
+  40px = 2.5rem
+  42px = 2.625rem
+  44px = 2.75rem
+  46px = 2.875rem
+  48px = 3rem
+  50px = 3.125rem
+  52px = 3.25rem
+  */
+
+body
+  margin-top: 0
+
+ol, ul
+  padding-left: 1.5em
+
+  .popover &:last-child
+    margin-bottom: 0
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child
+  margin-bottom: 0
+
+// Help region.
+.region-help
+  > .glyphicon
+    font-size: $font-size-large
+    float: left
+    margin: -0.05em 0.5em 0 0
+
+  .block
+    overflow: hidden
+
+.help-block, .control-group .help-inline
+  color: $gray-light
+  font-size: 12px
+  margin: 5px 0 10px
+  padding: 0
+
+  &:first-child
+    margin-top: 0
+
+.nopadding
+  padding: 0 !important
+  margin: 0 !important
+
+// Button styles
+
+// menu pdf styles - check _sidebar.sass for menu pdf styles specific to sidebar
+.menu-pdf
+  background-color: $light-green
+  text-align: center
+  padding: 20px 20px 25px 20px
+  span
+    display: block
+    font-size: 1rem
+    padding-top: 13px
+    text-decoration: underline
+    text-transform: uppercase
+    color: #454545
+    word-wrap: break-word
+  a:hover
+    span
+      color: $black-color
+.content
+  .menu-pdf
+    margin: 16px 0
+
+@media only screen and (min-width: $breakpoint-tablet)
+  // allow for 2 column menu pfs in content
+  .content
+    .menu-pdf
+      width: 47%
+      float: left
+      margin-right: 3%
+      min-height: 188px
+@media only screen and (min-width: $breakpoint-laptop)
+  // allow for 3 column menu pfs in content
+  .content
+    .menu-pdf
+      width: 30%
+      margin-right: 3%
+@media only screen and (min-width: $breakpoint-desktop)
+  // allow for 5 column menu pfs in content
+  .content
+    .menu-pdf
+      width: 18%
+      margin-right: 2%
+
+// hiding breadcrumb showing up on node pages
+.path-node
+  ol.breadcrumb
+    display: none
+
+@media only screen and (min-width: $breakpoint-tablet)
+  .path-node
+    .content-section
+      padding-left: 15px
+      padding-right: 15px

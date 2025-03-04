@@ -1,0 +1,179 @@
+/**
+ * Footer styling.
+.footer
+  margin-top: 45px
+  padding: 40px 0
+  background-color: $gray-dark
+  color: $white-color
+  font-family: $font-family-roboto-condensed
+  font-weight: 300
+  font-size: 1.125rem
+  a
+    color: $white-color
+    display: inline-block
+  a:hover
+    color: $body-bg
+  .footer-right-col .row div
+    margin: 0 auto
+    display: block
+    text-align: center
+  .field--name-field-footer-logo, .field--name-field-footer-right-image
+    display: none
+  .footer-right-col .row .social-links-footer
+    margin: 30px auto 28px auto
+  .field--name-field-footer-copyright-text
+    margin: 0 auto
+    font-size: 0.9rem
+  .graphics-footer
+    display: none !important
+  .footer-copyright-text
+    display: block
+    text-align: center
+    font-size: 1rem
+    padding: 0 20px
+    // social menu links
+  .facebook-logo, .twitter-logo
+    display: inline-block
+    width: 36px
+    height: 36px
+    background-size: 100%
+    background-repeat: no-repeat
+  .facebook-logo
+    background-image: url("../images/FB_logo_white.png")
+    margin-right: 30px
+  .facebook-logo:hover
+    background-image: url("../images/FB_logo_white-blackfilled.png")
+  .twitter-logo
+    background-image: url("../images/TW_logo_white.png")
+  .twitter-logo:hover
+    background-image: url("../images/TW_logo_white-blackfilled.png")
+  .menu-social-links > li
+    display: inline-block
+    > a
+      padding-top: 0
+      padding-bottom: 0
+  .menu-social-links
+    text-align: center
+    padding: 0
+
+// footer media queries
+@media only screen and (min-width: $breakpoint-tablet)
+  .footer
+    padding: 0
+    .footer-container-fluid
+      border-bottom: 1px solid $white-color
+    .social-links-footer, .address-footer, .graphics-footer
+      margin: 0
+      padding: 88px 0 50px 0
+      min-height: 250px
+    .footer-right-col .row .social-links-footer
+      border-left: 1px solid $white-color
+      border-right: 1px solid $white-color
+      padding-top: 118px
+      margin: 0
+    .social-links-footer a
+      padding: 0 8px
+    .graphics-footer
+      display: block !important
+      img
+        padding: 8px 0 0 10px
+    .address-footer
+      p
+        font-size: 1.125rem
+    .footer-copyright-text
+      line-height: 64px
+      font-size: 0.875rem
+      padding: 0
+
+@media only screen and (min-width: $breakpoint-laptop)
+  .footer
+    padding: 0 0 60px 0
+    .field--name-field-footer-logo
+      display: block
+    .social-links-footer, .address-footer, .graphics-footer, .footer-left-col
+      min-height: 230px
+    .social-links-footer, .address-footer, .graphics-footer
+      margin: 0
+      padding: 56px 0 0 0
+    .address-footer
+      border-left: 1px solid $white-color
+    .footer-right-col .row .social-links-footer
+      padding-top: 102px
+    .graphics-footer
+      img
+        padding: 0
+    .footer-left-col img
+      width: 70%
+      text-align: center
+      float: right
+      margin: 0 10px 0 0
+      padding: 46px 0 0 0
+    .field--name-field-company-info
+      text-align: left !important
+      padding: 0 20px
+    .footer-copyright-text
+      padding-right: 90px !important
+      text-align: right
+  // for pages other than frontpage, make footer full width
+  .page-node-type-page, .path-contact
+    .footer
+      .footer-container-fluid
+        .container
+          width: auto
+          padding: 0
+          margin: 0
+      .footer-copyright-text
+        width: 37.5%
+        float: right
+        text-align: left
+        padding-left: 25px
+        padding-right: 0 !important
+      .footer-left-col img
+        padding: 38px 0 0 0
+
+@media only screen and (min-width: $breakpoint-desktop)
+  .footer
+    padding: 0 0 130px 0
+    .footer-left-col img
+      width: 60%
+    .footer-copyright-text
+      padding-right: 160px !important
+@media only screen and (min-width: 1500px)
+  .footer
+    padding: 0 0 290px 0
+    .graphics-footer
+      img
+        margin-left: 30px
+    .footer-left-col img
+      margin: 0 58px 0 0
+      width: 67%
+      padding-top: 32px
+    .footer-copyright-text
+      padding-right: 132px !important
+  // for pages other than frontpage, make footer full width
+  .page-node-type-page, .path-contact
+    .footer
+      .footer-copyright-text
+        padding-left: 75px
+      .graphics-footer
+        img
+          padding: 0 0 0 50px
+          margin: 0
+      .footer-left-col img
+        margin: 0 65px 0 0
+        padding: 30px 0 0 0
+        width: 50%
+        max-width: 173px
+      .address-footer
+        padding: 52px 0 0 0
+      .field--name-field-company-info
+        width: 70%
+      .menu-social-links > li
+        > a
+          margin: 0 20px
+@media only screen and (min-width: 1870px)
+  // for pages other than frontpage, make footer full width
+  .page-node-type-page, .path-contact
+    .footer
+      .address-footer
+        padding: 72px 0 0 0

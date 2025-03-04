@@ -1,0 +1,146 @@
+/**
+ * Styles for all pages other than front page.
+body
+  background-color: $white-color
+  .region-content
+    padding: 0 20px
+  // headings (h1-h4)
+  h1.page-header, h2.block-title
+    color: $light-green
+    text-transform: uppercase
+  h1
+    font-size: 2.625rem // 42px
+  h1.page-header
+    border-bottom: 2px solid #989898
+    text-align: center
+  h2
+    font-size: 2.125rem // 34px
+    margin: 12px 0
+  h3
+    font-size: 1.75rem // 28px
+  h4
+    font-size: 1.625rem // 24px
+  h5
+    font-size: 1.375rem // 22px
+  h6
+    font-size: 1.125rem // 18px
+  // paragraph
+  p
+    font-size: 1rem
+
+  // Blockquote
+  blockquote
+    border-left: 5px solid #989898
+    p
+      font-size: 1.125rem
+      font-style: italic
+
+  // Image
+  article.embedded-entity
+    display: inline-block
+
+  // Embedded Media
+  figure.embedded-entity
+    max-width: 300px
+    figcaption
+      background-color: $body-bg
+      padding: 5px 0 5px 33px
+      font-weight: bold
+      margin-top: -5px
+      margin-bottom: 15px
+
+  // Hr
+  hr
+    border-top: 2px solid #989898
+
+  // Lists
+  // ul
+  // ol
+  ul, ol
+    font-size: 1rem
+    line-height: 1.8
+    padding-left: 1em
+
+  // links (<a>)
+  .content-section
+    a
+      text-decoration: underline
+    a:hover
+      color: #000
+
+// button
+.mobile-fpp-button, .fpp-button
+  text-align: center
+  a
+    padding: 22px
+    border: 1px solid $gray-dark
+    font-size: 1.125rem
+    font-weight: bold
+    text-align: center
+    display: inline-block
+    border-radius: 12px
+.mobile-fpp-button a
+  border: 2px solid $gray-dark
+  margin-top: 40px
+.fpp-button
+  display: none
+
+@media only screen and (min-width: $breakpoint-tablet)
+  .page-node-type-gallery
+    h1.page-header
+      display: inline-block
+    .fpp-button
+      text-align: left
+  body
+    .main-container
+      margin-top: 30px
+      padding-left: 15px
+      padding-right: 15px
+    .content
+      margin-top: 0
+    .region-content
+      padding: 0
+    // headings (h1-h4)
+    h1.page-header
+      margin-top: 0
+      margin-right: 30px
+      text-align: left
+
+    // image banner
+    .view-image-banner img
+      height: 400px
+      object-fit: cover
+
+    // button
+    .mobile-fpp-button
+      display: none
+    .fpp-button
+      display: block
+      a
+        font-size: 1rem
+        padding: 5px 30px
+        margin: 40px 0 0 0
+    .fpp-button:hover
+      a
+        background-color: $body-bg
+        text-decoration: none
+  .path-frontpage
+    .fpp-button:hover
+      a
+        background-color: $white-color
+
+@media only screen and (min-width: $breakpoint-laptop)
+  body
+    // headings (h1-h4)
+    h1.page-header
+      padding-bottom: 19px
+    h1
+      font-size: 2.5rem // 40px
+    // button
+    .fpp-button a
+      padding: 5px 50px
+
+@media only screen and (min-width: $breakpoint-desktop)
+  body
+    h1.page-header
+      font-size: 3.25rem // 52px
